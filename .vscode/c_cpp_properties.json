@@ -3,7 +3,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/home/leil/Documents/cpp/Cowboys vs Ninjas/part a/sources"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang-14",

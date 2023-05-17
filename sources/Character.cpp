@@ -1,44 +1,79 @@
 #include "Character.hpp"
+
 using namespace std;
 using namespace ariel;
 
-Character::Character(string name, Point location, int HP)
-{
-    this->name = name;
-    this->location = location;
-    this->HP = HP;
+//General Character functions
+Character::Character(string name,Point location){
+
+}
+double Character::distance(Character* other){
+    return 0;
+}
+bool Character::isAlive(){
+    return false;
+}
+void Character::hit(int damage){
+
+}
+Point Character::getLocation(){
+    return Point(0,0);
+}
+string Character::getName(){
+    return "";
+}
+int Character::getHP(){
+    return 1;
+}
+void Character::setHP(int updated){
+
+}
+string Character::print(){
+    return "";
 }
 
-bool Character::isAlive()
-{
-    return this->HP > 0;
+//Cowboy functions
+Cowboy::Cowboy(string name,Point location):Character(name,location){
+}
+bool Cowboy::hasboolets(){
+    return false;
+}
+void Cowboy::reload(){
+
+}
+void Cowboy::shoot(Character* enemy){
+
+}
+string Cowboy::print(){
+    return "";
 }
 
-double Character::distance(Character *other)
-{
-    return this->location.distance(other->location);
+//General ninja functions
+Ninja::Ninja(string name,Point location):Character(name,location){
+
+}
+void Ninja::move(Character*){
+
+}
+void Ninja::slash(Character *other){
+
+}
+void Ninja::setSpeed(int){
+
+}
+int Ninja::getSpeed(){
+    return 1;
+}
+string Ninja::print(){
+    return "";
 }
 
-void Character::hit(int damage)
-{
-    this->HP -= damage;
+//The kinds of the ninja
+OldNinja::OldNinja(string name, Point location):Ninja(name, location){
 }
 
-string Character::getName()
-{
-    return this->name;
+TrainedNinja::TrainedNinja(string name, Point location) : Ninja(name, location){
 }
 
-Point Character::getLocation()
-{
-    return this->location;
+YoungNinja::YoungNinja(string name, Point location) : Ninja(name, location){
 }
-
-void Character::print()
-{
-    cout << "name: " << this->name << endl;
-    cout << "location: ";
-    this->location.print();
-    cout << "HP: " << this->HP << endl;
-}
-

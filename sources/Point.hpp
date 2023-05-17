@@ -18,6 +18,7 @@ namespace ariel
 
     public:
         Point(double x, double y);
+        Point();
         double distance(Point other);
         void print();
         Point move_towards(Point origin, double distance, Point destination);
